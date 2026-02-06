@@ -1,23 +1,27 @@
 <div class="outer">
-  <div
-    class="box"
-    #box
-    (mousemove)="onMouseMove($event)"
-  >
-    <!-- Static button -->
-    <button class="static-btn">
-      Yes!
-    </button>
+  <div class="container">
+    <h1 class="title">Will you be my Valentine?</h1>
 
-    <!-- Moving button -->
-    <button
-      class="runner-btn"
-      [ngStyle]="{
-        left: runnerX + 'px',
-        top: runnerY + 'px'
-      }"
+    <div
+      class="box"
+      #box
+      (mousemove)="onMouseMove($event)"
     >
-      No
-    </button>
+      <!-- Static button -->
+      <button class="static-btn" (click)="celebrate()">
+        Yes!
+      </button>
+
+      <!-- Moving button -->
+      <button
+        class="runner-btn"
+        [ngStyle]="{
+          left: runnerX + 'px',
+          top: runnerY + 'px'
+        }"
+      >
+        No
+      </button>
+    </div>
   </div>
 </div>

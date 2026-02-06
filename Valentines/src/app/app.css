@@ -1,33 +1,80 @@
+/* Outer full-screen container */
 .outer {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4bc0c4;
+  background-color: #FF6F77;
 }
+
+/* Inner container to stack title + box */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* space between title and box */
+}
+
+/* Title */
+.title {
+  color: white;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
 
 /* The play area */
 .box {
   width: 400px;
   height: 300px;
-  border: 2px solid #ff4d6d;
-  border-radius: 12px;
+  border: 2px solid #FF3334;
+  background-color: #FF3334;
+  border-radius: 20px;
   position: relative;
   padding: 10px;
   box-sizing: border-box;
+  margin: 5em;
 }
 
 /* Static button */
 .static-btn {
-  padding: 10px 16px;
-  font-size: 15px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, #FFBBC1 0%, #FF8896 100%);
+    color: #fff;      
+    padding: 10px 32px;
+    font-size: 20px;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-100%, -50%); /* push left of center */
 }
+
+
 
 /* Moving button */
 .runner-btn {
-  position: absolute; /* 🔑 relative to .box */
-  padding: 10px 16px;
-  font-size: 15px;
-  transition: left 0.15s ease, top 0.15s ease;
-  cursor: pointer;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, #FFBBC1 0%, #FF8896 100%);
+    color: #fff;
+    position: absolute;
+    padding: 10px 32px;
+    font-size: 20px;
+    transition: left 0.15s ease, top 0.15s ease;
+    cursor: pointer;
 }
+
