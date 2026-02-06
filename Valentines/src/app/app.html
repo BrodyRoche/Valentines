@@ -1,0 +1,23 @@
+<div class="outer">
+  <div
+    class="box"
+    #box
+    (mousemove)="onMouseMove($event)"
+  >
+    <!-- Static button -->
+    <button class="static-btn">
+      Yes!
+    </button>
+
+    <!-- Moving button -->
+    <button
+      class="runner-btn"
+      [ngStyle]="{
+        left: runnerX + 'px',
+        top: runnerY + 'px'
+      }"
+    >
+      No
+    </button>
+  </div>
+</div>
